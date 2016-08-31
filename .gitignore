@@ -1,0 +1,16 @@
+*.class
+!**/src/test/resources/**/*.class
+
+*.jar
+!**/src/test/resources/**/*.jar
+
+*target/
+.DS_Store
+/.DS_Store
+/.idea
+*.iml
+.settings
+.classpath
+.project
+bin/
+
