@@ -62,5 +62,11 @@
       <artifactId>orientdb-server</artifactId>
       <version>2.1.9</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.princeton-java-algorithms</groupId>
+      <artifactId>algorithms</artifactId>
+      <version>4.0.1</version>
+    </dependency>
   </dependencies>
 </project>

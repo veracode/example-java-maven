@@ -7,6 +7,8 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
+import edu.princeton.cs.algorithms.BST;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -27,5 +29,8 @@ public class Main {
     }
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
+
+    BST bst = new BST();
+    bst.deleteMax();
   }
 }
