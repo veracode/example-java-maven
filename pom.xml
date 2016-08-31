@@ -73,5 +73,11 @@
       <artifactId>orientdb-server</artifactId>
       <version>2.1.9</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch</artifactId>
+      <version>2.3.3</version>
+    </dependency>
   </dependencies>
 </project>
