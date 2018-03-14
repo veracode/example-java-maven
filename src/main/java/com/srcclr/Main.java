@@ -10,6 +10,10 @@ public class Main {
 
     BCrypt.checkpw(candidate, hashed);
 
-    BCrypt.checkpw("harmless", hashed);
+    harmless(candidate);
+  }
+
+  static void harmless(String candidate) {
+    BCrypt.checkpw(candidate,"harmless");
   }
 }
