@@ -6,7 +6,8 @@ public class Main {
 
   public static void main(String[] args) {
     String candidate = args[0];
-    String hashed = BCrypt.hashpw(candidate, BCrypt.gensalt(12));
+    String salt = BCrypt.gensalt(12);
+    String hashed = BCrypt.hashpw(candidate, salt);
 
     BCrypt.checkpw(candidate, hashed);
 
