@@ -5,7 +5,6 @@ import org.apache.xml.security.signature.XMLSignatureInput;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 
 public class Main {
 
@@ -21,10 +20,7 @@ public class Main {
   private static void filterXMLSignature() {
     byte[] bytes = new byte[256];
 
-    try {
-      new MultipartStream(new ByteArrayInputStream(bytes), bytes);
-    } catch (IOException ignored) {
-    }
+    new MultipartStream(new ByteArrayInputStream(bytes), bytes);
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
   }
