@@ -2,6 +2,14 @@
 
 An example maven project to demonstrate [srcclr](https://www.srcclr.com) scans.
 
+## Building a fat jar
+
+```
+mvn clean package
+```
+
+The fat jar will be generated in the `target/` directory. The jar will be generated with the name `*-jar-with-dependencies.jar`.
+
 ## Try me!
 
 ```
