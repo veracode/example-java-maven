@@ -1,0 +1,9 @@
+name: build
+on: [push]
+jobs:
+  build-java-maven:
+    runs-on: ubuntu-latest
+    container: maven:3-openjdk-11
+    steps:
+      - uses: actions/checkout@v3
+      - run: mvn --batch-mode --update-snapshots package
