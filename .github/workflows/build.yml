@@ -6,4 +6,13 @@ jobs:
     container: maven:3-openjdk-11
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
       - run: mvn --batch-mode --update-snapshots package
+      - uses: actions/upload-artifact@v3.1.0
+        with:
+          path: target/*.jar
